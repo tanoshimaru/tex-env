@@ -1,0 +1,25 @@
+{
+  "name": "texlive_dev_container",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "texlive",
+  "runServices": [
+    "texlive"
+  ],
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mhutchie.git-graph",
+        "github.vscode-pull-request-github",
+        "nmsmith89.incrementor",
+        "ms-ceintl.vscode-language-pack-ja",
+        "james-yu.latex-workshop",
+        "ryu1kn.partial-diff",
+        "eamodio.gitlens",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  }
+}

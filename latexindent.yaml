@@ -1,0 +1,28 @@
+replacements:
+# Period and comma
+- this: '。'
+  that: '．'
+- this: '、'
+  that: '，'
+
+# Full-width digits to half-width digits
+- this: '０'
+  that: '0'
+- this: '１'
+  that: '1'
+- this: '２'
+  that: '2'
+- this: '３'
+  that: '3'
+- this: '４'
+  that: '4'
+- this: '５'
+  that: '5'
+- this: '６'
+  that: '6'
+- this: '７'
+  that: '7'
+- this: '８'
+  that: '8'
+- this: '９'
+  that: '9'

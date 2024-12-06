@@ -1,0 +1,80 @@
+\documentclass{ujarticle}
+
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb,amsthm,mathtools}
+\usepackage{amsfonts}
+\usepackage[noend]{algorithmic}
+\usepackage{algorithm}
+\usepackage{color}
+
+% for text color
+\usepackage{color}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+% for biblatex
+\usepackage[backend=biber, style=numeric, sortcites=true, sorting=nyt]{biblatex}
+\addbibresource{ref.bib}
+
+% for hyperref
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{
+ setpagesize=false,
+ bookmarksnumbered=true,
+ colorlinks=true
+}
+
+% for algorithm
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+% for theorem
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{prop}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{cor}[theorem]{系}
+\newtheorem{example}[theorem]{例}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+\newtheorem{guide}[theorem]{参考}
+\theoremstyle{remark}
+\newtheorem*{Proof}{Proof}
+
+% for referencing
+\newcommand\figref[1]{\textbf{図~\ref{fig:#1}}}
+\newcommand\tabref[1]{\textbf{表~\ref{tab:#1}}}
+\newcommand\algref[1]{\textbf{アルゴリズム~\ref{alg:#1}}}
+\newcommand\chapref[1]{~\ref{chap:#1}章}
+\newcommand\secref[1]{~\ref{sec:#1}節}
+
+\begin{document}
+
+\title{タイトル}
+\author{著者}
+\date{日付}
+
+\maketitle
+
+\section{はじめに}
+\input{section/1_introduction.tex}
+
+\section{準備}
+\input{section/2_preparation.tex}
+
+\section{提案手法}
+\input{section/3_proposed_method.tex}
+
+\section{実験および結果}
+\input{section/4_experiments_and_results.tex}
+
+\section{まとめ}
+\input{section/5_conclusion.tex}
+
+\section*{謝辞}
+
+\printbibliography[title=参考文献]
+
+\end{document}
+
+% end of file

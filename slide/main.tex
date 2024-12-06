@@ -1,0 +1,101 @@
+\documentclass[aspectratio=169, 10.5pt]{beamer}
+\usepackage{amsmath, amssymb, bm, ascmac, multicol, multirow}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{booktabs}
+
+\setmainfont{Noto Sans}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\usetheme{Boadilla}
+\useinnertheme{rectangles}
+\usecolortheme{orchid}
+\usefonttheme{professionalfonts}
+
+\setbeamercolor{line}{fg=blue}
+\setbeamercolor{title}{fg=normal text.fg}
+\setbeamercolor{frametitle}{fg=normal text.fg}
+\setbeamercolor{section in toc}{fg=normal text.fg}
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{-}
+\setbeamertemplate{itemize subitem}{-}
+\setbeamertemplate{section in toc}[default]
+
+\newcommand{\drawline}{
+    \vspace{-1.0em}
+    \noindent\textcolor{blue!20}{\hrule height 1.0pt}
+}
+
+\addtobeamertemplate{frametitle}{}{
+    \drawline
+}
+
+\AtBeginSection[]{
+\begin{frame}{Contents}
+    \tableofcontents[currentsection]
+\end{frame}
+}
+
+\title[TITLE]{TITLE}
+\institute[XXXX XXXX Lab.]{XXXX XXXX Lab.}
+\author[Nanida Koreaki]{Nanida Koreaki}
+\date[XXXX XX, XXXX]{XXXX XX, XXXX}
+\titlegraphic{\includegraphics[width=3.5cm]{./images/logo.png}}
+
+\begin{document}
+
+\begin{frame}
+	\begin{center}
+		\vspace{1.0em}
+		\Large
+		\textbf{\inserttitle} \\
+		\vspace{-1.0em}
+		\noindent\textcolor{blue!20}{\rule{0.7\linewidth}{1.5pt}} \\
+		\vspace{1.0em}
+		\begin{minipage}{0.35\linewidth}
+			\begin{center}
+				\footnotesize
+				\insertinstitute \\
+				\insertauthor \\
+				\insertdate
+			\end{center}
+		\end{minipage}
+		\begin{minipage}{0.35\linewidth}
+			\begin{center}
+				\inserttitlegraphic
+			\end{center}
+		\end{minipage}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Contents}
+	\tableofcontents
+\end{frame}
+
+\section{Introduction}
+\input{./sections/1_introduction.tex}
+
+\section{Background}
+\input{./sections/2_background.tex}
+
+\section{Previous Method}
+\input{./sections/3_previous.tex}
+
+\section{Proposed Method}
+\input{./sections/4_proposed.tex}
+
+\section{Experiment}
+\input{./sections/5_experiment.tex}
+
+\section{Conclusion}
+\input{./sections/6_conclusion.tex}
+
+\input{./sections/7_appendix.tex}
+
+\end{document}

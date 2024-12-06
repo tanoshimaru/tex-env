@@ -1,0 +1,125 @@
+{
+    // general
+    "files.eol": "\n",
+    "files.autoSave": "off",
+    // latex workshop
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "*.tex": "latex"
+    },
+    // file format using latexindent
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "latexindent",
+    "latex-workshop.formatting.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-l",
+        "%WORKSPACE_FOLDER%/latexindent.yaml",
+        "-r",
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-r",
+                "%WORKSPACE_FOLDER%/.latexmkrc",
+                "-time",
+                "%DOC%",
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-r",
+                "-time",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "cleanup_1",
+            "command": "latexmk",
+            "args": [
+                "-c",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "cleanup_2",
+            "command": "rm",
+            "args": [
+                "-f",
+                "%DOCFILE%.bbl",
+                "%DOCFILE%.dvi",
+                "%DOCFILE%.synctex.gz",
+                "%DOCFILE%.nav",
+                "%DOCFILE%.snm"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk",
+                "cleanup_1",
+                "cleanup_2"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex",
+                "cleanup_1",
+                "cleanup_2"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "latexmk",
+    "editor.wordBasedSuggestions": "off",
+    "editor.wordWrap": "on",
+    "diffEditor.wordWrap": "inherit",
+    "[tex]": {
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.tabSize": 2
+    },
+    "[bibtex]": {
+        "editor.tabSize": 2
+    },
+    "[latex]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+        "editor.wordWrap": "on",
+        "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?。．、，（）「」『』［］｛｝《》てにをはがのともへでや ",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        },
+        "editor.bracketPairColorization.enabled": true,
+        "editor.unicodeHighlight.invisibleCharacters": true,
+        "editor.unicodeHighlight.allowedCharacters": {
+            "，": true,
+            "．": true,
+            "！": true,
+            "？": true,
+            "［": true,
+            "］": true,
+            "｛": true,
+            "｝": true,
+            "＜": true,
+            "＞": true
+        },
+        "editor.stickyScroll.enabled": true
+    }
+}

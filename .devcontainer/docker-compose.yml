@@ -1,0 +1,14 @@
+services:
+  texlive:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERNAME: ${USER}
+        UID: 1000
+        GID: 1000
+    volumes:
+      - ..:/workspace
+      - ~/.ssh:/home/${USER}/.ssh
+    tty: true
+    stdin_open: true
