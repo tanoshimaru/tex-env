@@ -20,3 +20,15 @@ $biber = 'biber --bblencoding=utf8 -u -U --output_safechars %O %S';
 
 # 索引作成 (upmendex 使用)
 $makeindex = 'upmendex %O -o %D %S -s jpbase';
+
+# 出力ディレクトリ
+$out_dir = ".";
+
+# エラーが発生した場合に一時ファイルを削除しない
+$emulate_aux = 1;
+
+# 一時ファイルのディレクトリ
+$aux_dir = ".tex_intermediates";
+
+# クリーンアップ
+$clean_ext="$clean_ext run.xml";

@@ -14,11 +14,10 @@
     "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.formatting.latexindent.path": "latexindent",
     "latex-workshop.formatting.latexindent.args": [
-        "-c",
-        "%DIR%/",
         "%TMPFILE%",
-        "-l",
-        "%WORKSPACE_FOLDER%/latexindent.yaml",
+        "-c=%DIR%/",
+        "-y=defaultIndent: '%INDENT%'",
+        "-l=%WORKSPACE_FOLDER%/latexindent.yaml",
         "-r",
     ],
     "latex-workshop.latex.tools": [

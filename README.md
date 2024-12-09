@@ -1,7 +1,10 @@
 # tex-env
 
-## ショートカットキーの設定
+## Recipes
+- `latexmk`：原稿用
+- `xelatex`：スライド用
 
+## Shortcuts
 `keybindings.json`に以下を追加することで、ビルドレシピの選択（`ctrl+alt+t`）、ビルドの強制停止（`ctrl+alt+d`）、一時ファイルの削除（`ctrl+alt+c`）のショートカットを使用できるようになる。
 ```
 {
