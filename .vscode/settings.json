@@ -74,6 +74,7 @@
             "name": "xelatex",
             "tools": [
                 "xelatex",
+                "xelatex",
                 "cleanup_1",
                 "cleanup_2"
             ]
