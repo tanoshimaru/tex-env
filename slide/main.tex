@@ -5,78 +5,43 @@
 \usepackage{xeCJK}
 \usepackage{xcolor}
 \usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
 
-\setmainfont{Noto Sans}
+% \setmainfont{NotoSans-Regular}  % コンパイル激遅なのである程度完成するまでコメントアウト
 \setCJKmainfont{Noto Sans CJK JP}
 \setCJKsansfont{Noto Sans CJK JP}
 
-\renewcommand{\baselinestretch}{1.5}
-
-\usetheme{Boadilla}
-\useinnertheme{rectangles}
-\usecolortheme{orchid}
-\usefonttheme{professionalfonts}
-
-\setbeamercolor{line}{fg=blue}
-\setbeamercolor{title}{fg=normal text.fg}
-\setbeamercolor{frametitle}{fg=normal text.fg}
-\setbeamercolor{section in toc}{fg=normal text.fg}
-\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{itemize item}{-}
-\setbeamertemplate{itemize subitem}{-}
-\setbeamertemplate{section in toc}[default]
-
-\newcommand{\drawline}{
-    \vspace{-1.0em}
-    \noindent\textcolor{blue!20}{\hrule height 1.0pt}
+\usetheme{metropolis}
+\metroset{
+  block=fill,  % ブロックに背景をつける
+  numbering=fraction  % 合計ページ数を表示
 }
-
-\addtobeamertemplate{frametitle}{}{
-    \drawline
-}
+\setbeamerfont{frame numbering}{size=\large}  % ページ番号のフォントサイズ
+\usefonttheme{professionalfonts}  % 数式のフォントを変更
 
 \AtBeginSection[]{
 \begin{frame}{Outline}
-    \tableofcontents[currentsection]
+  \tableofcontents[currentsection]
 \end{frame}
 }
 
-\title[TITLE]{TITLE}
-\institute[XXXX XXXX Lab.]{XXXX XXXX Lab.}
-\author[XXXX XXXX]{XXXX XXXX}
-\date[Jan. 1, 2025]{Jan. 1, 2025}
-\titlegraphic{\includegraphics[width=3.5cm]{./images/logo.png}}
+\title{TITLE}
+\author{XXXX XXXX}
+\date{\today}
+\institute{INSTITUTE}
+\titlegraphic{\vspace{1cm}\hfill\includegraphics[width=2.5cm]{./images/logo.png}}
 
 \begin{document}
 
-\begin{frame}
-	\begin{center}
-		\vspace{1.0em}
-		\Large
-		\textbf{\inserttitle} \\
-		\vspace{-1.0em}
-		\noindent\textcolor{blue!20}{\rule{0.7\linewidth}{1.5pt}} \\
-		\vspace{1.0em}
-		\begin{minipage}{0.35\linewidth}
-			\begin{center}
-				\footnotesize
-				\insertinstitute \\
-				\insertauthor \\
-				\insertdate
-			\end{center}
-		\end{minipage}
-		\begin{minipage}{0.35\linewidth}
-			\begin{center}
-				\inserttitlegraphic
-			\end{center}
-		\end{minipage}
-	\end{center}
-\end{frame}
+\maketitle
 
 \begin{frame}{Outline}
-	\tableofcontents
+  \tableofcontents
 \end{frame}
+
+\section{Blocks}
+\input{./sections/0_blocks.tex}
 
 \section{Introduction}
 \input{./sections/1_introduction.tex}

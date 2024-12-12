@@ -1,6 +1,9 @@
 FROM texlive/texlive:latest-full
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    sudo \
+    ssh \
+    nano \
     vim \
     latex-cjk-all \
     fonts-noto-cjk \

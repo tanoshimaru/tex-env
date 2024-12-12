@@ -1,6 +1,7 @@
 # tex-env
 
 ## Recipes
+`.vscode/settings.json`の`"latex-workshop.latex.recipe.default"`を変更することでデフォルトのビルドレシピを変更できる．
 - `latexmk`：原稿用
 - `xelatex`：スライド用
 
