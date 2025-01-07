@@ -38,17 +38,6 @@
 \usepackage[keys]{cryptocode}
 \createpseudocodeblock{pcb}{center, boxed}{}{}{linenumbering}
 
-% % for theorem
-% \theoremstyle{definition}
-% \newtheorem{theorem}{定理}
-% \newtheorem{prop}[theorem]{命題}
-% \newtheorem{lemma}[theorem]{補題}
-% \newtheorem{cor}[theorem]{系}
-% \newtheorem{example}[theorem]{例}
-% \newtheorem{definition}[theorem]{定義}
-% \newtheorem{remark}[theorem]{注意}
-% \newtheorem{guide}[theorem]{参考}
-
 % for referencing
 \newcommand\figref[1]{\textbf{図~\ref{fig:#1}}}
 \newcommand\tabref[1]{\textbf{表~\ref{tab:#1}}}
@@ -74,8 +63,11 @@
 % \setbeamerfont{frame numbering}{size=\large} % ページ番号のフォントサイズ
 \usefonttheme{professionalfonts} % 数式のフォントを変更
 
-% % テーマカラーを設定
+% % カラーを定義
 % \definecolor{kuro}{HTML}{282c34}
+% \definecolor{orangered}{HTML}{ff4500}
+
+% % テーマのメインカラーを設定
 % \setbeamercolor{structure}{fg=kuro}
 % \setbeamercolor{section in toc}{fg=kuro}
 % \setbeamercolor{subsection in toc}{fg=kuro}
@@ -99,6 +91,10 @@
 % \setbeamercolor{caption text}{fg=kuro}
 % \setbeamercolor{caption separator}{fg=kuro}
 % \setbeamercolor{caption number}{fg=kuro}
+
+% % プログレスバーおよびタイトルセパレータのカラーを設定
+% \setbeamercolor{progress bar}{fg=orangered}
+% \setbeamercolor{title separator}{fg=orangered}
 
 % itemize のトグルを変更
 \setbeamertemplate{itemize item}{$\bullet$}
