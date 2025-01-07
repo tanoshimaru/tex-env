@@ -1,0 +1,119 @@
+\ProvidesPackage{mystyle}
+
+% for math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{ascmac}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+
+% for table
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+
+% for figures
+\usepackage{graphicx}
+
+% for text color
+\usepackage{xcolor}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+% for bibliography
+\usepackage[backend=biber, style=numeric, sortcites=true, sorting=nyt]{biblatex}
+\setbeamertemplate{bibliography item}[text]
+\addbibresource{../paper/ref.bib}
+
+% for hyperref
+\usepackage{hyperref}
+
+% for algorithm
+\usepackage[noend]{algorithmic}
+\usepackage{algorithm}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+% for cryptocode
+\usepackage[keys]{cryptocode}
+\createpseudocodeblock{pcb}{center, boxed}{}{}{linenumbering}
+
+% % for theorem
+% \theoremstyle{definition}
+% \newtheorem{theorem}{定理}
+% \newtheorem{prop}[theorem]{命題}
+% \newtheorem{lemma}[theorem]{補題}
+% \newtheorem{cor}[theorem]{系}
+% \newtheorem{example}[theorem]{例}
+% \newtheorem{definition}[theorem]{定義}
+% \newtheorem{remark}[theorem]{注意}
+% \newtheorem{guide}[theorem]{参考}
+
+% for referencing
+\newcommand\figref[1]{\textbf{図~\ref{fig:#1}}}
+\newcommand\tabref[1]{\textbf{表~\ref{tab:#1}}}
+\newcommand\algref[1]{\textbf{アルゴリズム~\ref{alg:#1}}}
+\newcommand\chapref[1]{~\ref{chap:#1}章}
+\newcommand\secref[1]{~\ref{sec:#1}節}
+
+% for spacing
+\usepackage{setspace}
+
+% for fonts
+\usepackage{xeCJK}
+\usepackage{fontspec}
+% \setmainfont{NotoSans-Regular}  % コンパイルに時間がかかるので一旦コメントアウト，最後にコメントアウトを外す
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+
+\usetheme{metropolis}
+\metroset{
+  block=fill, % ブロックに背景をつける
+  numbering=fraction % 合計ページ数を表示
+}
+% \setbeamerfont{frame numbering}{size=\large} % ページ番号のフォントサイズ
+\usefonttheme{professionalfonts} % 数式のフォントを変更
+
+% % テーマカラーを設定
+% \definecolor{kuro}{HTML}{282c34}
+% \setbeamercolor{structure}{fg=kuro}
+% \setbeamercolor{section in toc}{fg=kuro}
+% \setbeamercolor{subsection in toc}{fg=kuro}
+% \setbeamercolor{frametitle}{bg=kuro}
+% \setbeamercolor{title}{fg=kuro}
+% \setbeamercolor{author}{fg=kuro}
+% \setbeamercolor{date}{fg=kuro}
+% \setbeamercolor{institute}{fg=kuro}
+% \setbeamercolor{block title}{fg=kuro}
+% \setbeamercolor{block body}{fg=kuro}
+% \setbeamercolor{item}{fg=kuro}
+% \setbeamercolor{itemize item}{fg=kuro}
+% \setbeamercolor{itemize subitem}{fg=kuro}
+% \setbeamercolor{itemize subsubitem}{fg=kuro}
+% \setbeamercolor{enumerate item}{fg=kuro}
+% \setbeamercolor{enumerate subitem}{fg=kuro}
+% \setbeamercolor{enumerate subsubitem}{fg=kuro}
+% \setbeamercolor{caption}{fg=kuro}
+% \setbeamercolor{caption name}{fg=kuro}
+% \setbeamercolor{caption title}{fg=kuro}
+% \setbeamercolor{caption text}{fg=kuro}
+% \setbeamercolor{caption separator}{fg=kuro}
+% \setbeamercolor{caption number}{fg=kuro}
+
+% itemize のトグルを変更
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+\setbeamertemplate{itemize subsubitem}{--}
+
+% tableofcontents のトグルを変更
+\setbeamertemplate{section in toc}{\inserttocsectionnumber. \inserttocsection}
+\setbeamertemplate{subsection in toc}{\hspace{1.2em}\inserttocsubsectionnumber. \inserttocsubsection}
+\setbeamertemplate{subsubsection in toc}{\hspace{2.4em}\inserttocsubsubsectionnumber. \inserttocsubsubsection}
+
+\AtBeginSection[]{
+  \begin{frame}{構成}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\endinput

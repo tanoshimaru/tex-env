@@ -1,30 +1,6 @@
 \documentclass[aspectratio=169, 10.5pt]{beamer}
-\usepackage{amsmath, amssymb, bm, ascmac, multicol, multirow}
-\usepackage{setspace}
-\usepackage{fontspec}
-\usepackage{xeCJK}
-\usepackage{xcolor}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{hyperref}
 
-% \setmainfont{NotoSans-Regular}  % コンパイル激遅なのである程度完成するまでコメントアウト
-\setCJKmainfont{Noto Sans CJK JP}
-\setCJKsansfont{Noto Sans CJK JP}
-
-\usetheme{metropolis}
-\metroset{
-  block=fill,  % ブロックに背景をつける
-  numbering=fraction  % 合計ページ数を表示
-}
-\setbeamerfont{frame numbering}{size=\large}  % ページ番号のフォントサイズ
-\usefonttheme{professionalfonts}  % 数式のフォントを変更
-
-\AtBeginSection[]{
-\begin{frame}{Outline}
-  \tableofcontents[currentsection]
-\end{frame}
-}
+\usepackage{mystyle}
 
 \title{TITLE}
 \author{XXXX XXXX}
@@ -60,6 +36,10 @@
 
 \section{Conclusion}
 \input{./sections/6_conclusion.tex}
+
+\begin{frame}[allowframebreaks]{References}
+  \printbibliography
+\end{frame}
 
 \input{./sections/7_appendix.tex}
 

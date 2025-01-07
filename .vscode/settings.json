@@ -41,6 +41,13 @@
             ]
         },
         {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
             "name": "cleanup_1",
             "command": "latexmk",
             "args": [
@@ -53,11 +60,12 @@
             "command": "rm",
             "args": [
                 "-f",
+                "indent.log",
                 "%DOCFILE%.bbl",
                 "%DOCFILE%.dvi",
-                "%DOCFILE%.synctex.gz",
                 "%DOCFILE%.nav",
-                "%DOCFILE%.snm"
+                "%DOCFILE%.snm",
+                "%DOCFILE%.synctex.gz"
             ]
         }
     ],
@@ -74,11 +82,12 @@
             "name": "xelatex",
             "tools": [
                 "xelatex",
+                "biber",
                 "xelatex",
                 "cleanup_1",
                 "cleanup_2"
             ]
-        }
+        },
     ],
     "latex-workshop.latex.recipe.default": "xelatex",
     "editor.wordBasedSuggestions": "off",

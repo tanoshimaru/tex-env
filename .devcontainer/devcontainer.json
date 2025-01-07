@@ -18,7 +18,8 @@
         "james-yu.latex-workshop",
         "ryu1kn.partial-diff",
         "eamodio.gitlens",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "tomoki1207.pdf"
       ]
     }
   }
