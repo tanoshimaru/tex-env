@@ -39,9 +39,9 @@
 \createpseudocodeblock{pcb}{center, boxed}{}{}{linenumbering}
 
 % for referencing
-\newcommand\figref[1]{\textbf{図~\ref{fig:#1}}}
-\newcommand\tabref[1]{\textbf{表~\ref{tab:#1}}}
-\newcommand\algref[1]{\textbf{アルゴリズム~\ref{alg:#1}}}
+\newcommand\figref[1]{\textbf{Figure~\ref{fig:#1}}}
+\newcommand\tabref[1]{\textbf{Table~\ref{tab:#1}}}
+\newcommand\algref[1]{\textbf{Algorithm~\ref{alg:#1}}}
 \newcommand\chapref[1]{~\ref{chap:#1}章}
 \newcommand\secref[1]{~\ref{sec:#1}節}
 
@@ -96,6 +96,16 @@
 % \setbeamercolor{progress bar}{fg=color_2}
 % \setbeamercolor{title separator}{fg=color_2}
 
+% blockの見た目を変更
+\setbeamertemplate{blocks}[rounded][shadow=false]
+% \setbeamerfont{block title}{size=\large}
+% \setbeamerfont{block title alerted}{size=\large}
+% \setbeamercolor{block title alerted}{fg=mDarkTeal, bg=mLightBrown!45!yellow!45}
+% \setbeamercolor{block title example}{fg=magenta!10!black, bg=mLightGreen!70}
+% \setbeamercolor{block body alerted}{bg=mLightBrown!25}
+% \setbeamercolor{block body example}{bg=mLightGreen!15}
+
+
 % itemize のトグルを変更
 \setbeamertemplate{itemize item}{$\bullet$}
 \setbeamertemplate{itemize subitem}{$\circ$}
@@ -107,7 +117,7 @@
 \setbeamertemplate{subsubsection in toc}{\hspace{2.4em}\inserttocsubsubsectionnumber. \inserttocsubsubsection}
 
 \AtBeginSection[]{
-  \begin{frame}{構成}
+  \begin{frame}{Outline}
     \tableofcontents[currentsection]
   \end{frame}
 }
