@@ -9,6 +9,5 @@ services:
         GID: 1000
     volumes:
       - ..:/workspace
-      - ~/.ssh:/home/${USER}/.ssh
     tty: true
     stdin_open: true
