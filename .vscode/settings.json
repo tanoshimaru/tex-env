@@ -61,7 +61,7 @@
             "args": [
                 "-f",
                 "indent.log",
-                "%DOCFILE%.bbl",
+                "%DOCFILE%.bbl*",
                 "%DOCFILE%.dvi",
                 "%DOCFILE%.nav",
                 "%DOCFILE%.snm",
