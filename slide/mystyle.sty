@@ -12,13 +12,19 @@
 \usepackage{booktabs}
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{array}  % 幅指定かつ中央揃え
 
 % for figures
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+% % for caption
+\setlength{\abovecaptionskip}{0pt}
+\setbeamerfont{caption}{size=\footnotesize}
 
 % for text color
 \usepackage{xcolor}
-\newcommand{\red}[1]{\textcolor{red}{#1}}
 
 % for bibliography
 \usepackage[backend=biber, style=numeric, sortcites=true, sorting=nyt]{biblatex}
@@ -63,38 +69,38 @@
 % \setbeamerfont{frame numbering}{size=\large} % ページ番号のフォントサイズ
 \usefonttheme{professionalfonts} % 数式のフォントを変更
 
-% % カラーを定義
-% \definecolor{color_1}{HTML}{282c34}
-% \definecolor{color_2}{HTML}{ff4500}
+% カラーを定義
+% \definecolor{themecolor}{HTML}{26373b}
+% \definecolor{highlight}{HTML}{e18117}
 
-% % テーマのメインカラーを設定
-% \setbeamercolor{structure}{fg=color_1}
-% \setbeamercolor{section in toc}{fg=color_1}
-% \setbeamercolor{subsection in toc}{fg=color_1}
-% \setbeamercolor{frametitle}{bg=color_1}
-% \setbeamercolor{title}{fg=color_1}
-% \setbeamercolor{author}{fg=color_1}
-% \setbeamercolor{date}{fg=color_1}
-% \setbeamercolor{institute}{fg=color_1}
-% \setbeamercolor{block title}{fg=color_1}
-% \setbeamercolor{block body}{fg=color_1}
-% \setbeamercolor{item}{fg=color_1}
-% \setbeamercolor{itemize item}{fg=color_1}
-% \setbeamercolor{itemize subitem}{fg=color_1}
-% \setbeamercolor{itemize subsubitem}{fg=color_1}
-% \setbeamercolor{enumerate item}{fg=color_1}
-% \setbeamercolor{enumerate subitem}{fg=color_1}
-% \setbeamercolor{enumerate subsubitem}{fg=color_1}
-% \setbeamercolor{caption}{fg=color_1}
-% \setbeamercolor{caption name}{fg=color_1}
-% \setbeamercolor{caption title}{fg=color_1}
-% \setbeamercolor{caption text}{fg=color_1}
-% \setbeamercolor{caption separator}{fg=color_1}
-% \setbeamercolor{caption number}{fg=color_1}
+% テーマのメインカラーを設定
+% \setbeamercolor{structure}{fg=themecolor}
+% \setbeamercolor{section in toc}{fg=themecolor}
+% \setbeamercolor{subsection in toc}{fg=themecolor}
+% \setbeamercolor{frametitle}{bg=themecolor}
+% \setbeamercolor{title}{fg=themecolor}
+% \setbeamercolor{author}{fg=themecolor}
+% \setbeamercolor{date}{fg=themecolor}
+% \setbeamercolor{institute}{fg=themecolor}
+% \setbeamercolor{block title}{fg=themecolor}
+% \setbeamercolor{block body}{fg=themecolor}
+% \setbeamercolor{item}{fg=themecolor}
+% \setbeamercolor{itemize item}{fg=themecolor}
+% \setbeamercolor{itemize subitem}{fg=themecolor}
+% \setbeamercolor{itemize subsubitem}{fg=themecolor}
+% \setbeamercolor{enumerate item}{fg=themecolor}
+% \setbeamercolor{enumerate subitem}{fg=themecolor}
+% \setbeamercolor{enumerate subsubitem}{fg=themecolor}
+% \setbeamercolor{caption}{fg=themecolor}
+% \setbeamercolor{caption name}{fg=themecolor}
+% \setbeamercolor{caption title}{fg=themecolor}
+% \setbeamercolor{caption text}{fg=themecolor}
+% \setbeamercolor{caption separator}{fg=themecolor}
+% \setbeamercolor{caption number}{fg=themecolor}
 
-% % プログレスバーおよびタイトルセパレータのカラーを設定
-% \setbeamercolor{progress bar}{fg=color_2}
-% \setbeamercolor{title separator}{fg=color_2}
+% プログレスバーおよびタイトルセパレータのカラーを設定
+% \setbeamercolor{progress bar}{fg=highlight}
+% \setbeamercolor{title separator}{fg=highlight}
 \setlength{\metropolis@titleseparator@linewidth}{1pt}
 
 % blockの見た目を変更
@@ -106,13 +112,12 @@
 % \setbeamercolor{block body alerted}{bg=mLightBrown!25}
 % \setbeamercolor{block body example}{bg=mLightGreen!15}
 
-
-% itemize のトグルを変更
+% itemizeのトグルを変更
 \setbeamertemplate{itemize item}{$\bullet$}
 \setbeamertemplate{itemize subitem}{$\circ$}
 \setbeamertemplate{itemize subsubitem}{--}
 
-% tableofcontents のトグルを変更
+% tableofcontentsのトグルを変更
 \setbeamertemplate{section in toc}{\inserttocsectionnumber. \inserttocsection}
 \setbeamertemplate{subsection in toc}{\hspace{1.2em}\inserttocsubsectionnumber. \inserttocsubsection}
 \setbeamertemplate{subsubsection in toc}{\hspace{2.4em}\inserttocsubsubsectionnumber. \inserttocsubsubsection}
@@ -121,6 +126,19 @@
   \begin{frame}{Outline}
     \tableofcontents[currentsection]
   \end{frame}
+}
+
+% 右上に発表番号を追加
+\addtobeamertemplate{frametitle}{}{
+  \vspace{-1.7em}
+  \makebox[\dimexpr\linewidth+8mm][r]{\small{4C2-4}}
+  \vspace{0.7em}
+}
+
+% 強調テキスト
+\definecolor{myred}{HTML}{cc2014}
+\newcommand{\red}[1]{
+  \textcolor{myred}{\textbf{#1}}
 }
 
 \endinput
