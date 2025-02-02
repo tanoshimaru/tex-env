@@ -68,31 +68,53 @@
 \renewcommand{\baselinestretch}{1.2}
 
 % カラーを定義
-\definecolor{themecolor}{HTML}{26373b}
-% \definecolor{color_font}{HTML}{e18117}
+\definecolor{themecolor1}{HTML}{26373b}
+\definecolor{themecolor2}{HTML}{cc2014}
+\definecolor{bgcolor1}{HTML}{d0d3d4}
+\definecolor{bgcolor2}{HTML}{e4e6e7}
+
+% テーマカラーを設定
+\setbeamercolor{structure}{fg=themecolor1}
+\setbeamercolor{section in toc}{fg=themecolor1}
+\setbeamercolor{subsection in toc}{fg=themecolor1}
+\setbeamercolor{block title}{fg=themecolor1}
+\setbeamercolor{block body}{fg=themecolor1}
+\setbeamercolor{item}{fg=themecolor1}
+\setbeamercolor{itemize item}{fg=themecolor1}
+\setbeamercolor{itemize subitem}{fg=themecolor1}
+\setbeamercolor{itemize subsubitem}{fg=themecolor1}
+\setbeamercolor{enumerate item}{fg=themecolor1}
+\setbeamercolor{enumerate subitem}{fg=themecolor1}
+\setbeamercolor{enumerate subsubitem}{fg=themecolor1}
+\setbeamercolor{caption}{fg=themecolor1}
+\setbeamercolor{caption name}{fg=themecolor1}
+\setbeamercolor{caption title}{fg=themecolor1}
+\setbeamercolor{caption text}{fg=themecolor1}
+\setbeamercolor{caption separator}{fg=themecolor1}
+\setbeamercolor{caption number}{fg=themecolor1}
 
 % itemizeのトグルを変更
 \setbeamertemplate{itemize item}{$\bullet$}
 \setbeamertemplate{itemize subitem}{$\circ$}
 \setbeamertemplate{itemize subsubitem}{--}
 
-% ヘッダーのカスタマイズ
+% headlineのカスタマイズ
 \setbeamerfont{headline}{size=\Huge, series=\bfseries}
-\setbeamercolor{headline}{fg=white, bg=themecolor}
+\setbeamercolor{headline}{fg=white, bg=themecolor1}
 \setbeamertemplate{headline}{
   \begin{beamercolorbox}[wd=\paperwidth, dp=0.2em]{headline}
     \begin{center}
       \inserttitle \\
       \vskip 0.4em
-      \large \insertinstitute \hspace{0.5em} \insertauthor
+      \large \insertinstitute \hspace{0.5em} \insertauthor \hspace{0.5em} (指導教員 \supervisor \ 教授)
     \end{center}
   \end{beamercolorbox}
   \vskip -0.6em
 }
 
-% フッターのカスタマイズ
+% footlineのカスタマイズ
 \setbeamerfont{footline}{size=\small, series=\bfseries}
-\setbeamercolor{footline}{fg=white, bg=themecolor}
+\setbeamercolor{footline}{fg=white, bg=themecolor1}
 \setbeamertemplate{footline}{
   \begin{beamercolorbox}[wd=\paperwidth, dp=0.5em]{footline}
     \begin{center}
@@ -101,34 +123,56 @@
   \end{beamercolorbox}
 }
 
-% ブロックのカスタマイズ
-\setbeamerfont{block title}{size=\LARGE, series=\bfseries}
-\setbeamercolor{block title}{fg=themecolor}
-\setbeamerfont{block body}{size=\large, series=\mdseries}
-\setbeamercolor{block body}{fg=themecolor}
-\setbeamertemplate{block begin}{
-  \usebeamerfont{block title}
-  \begin{beamercolorbox}[wd=\textwidth]{block title}
+% sectionblockを定義
+\setbeamerfont{sectionblock title}{size=\LARGE, series=\bfseries}
+\setbeamercolor{sectionblock title}{fg=themecolor1}
+\setbeamerfont{sectionblock body}{size=\large, series=\mdseries}
+\setbeamercolor{sectionblock body}{fg=themecolor1}
+\setbeamertemplate{sectionblock begin}{
+  \usebeamerfont{sectionblock title}
+  \begin{beamercolorbox}[wd=\textwidth]{sectionblock title}
     \begin{center}
       \insertblocktitle
       \vskip -1.0em
-      \noindent\textcolor{themecolor!50}{\hrule height 6pt}
+      \noindent\textcolor{themecolor1!50}{\hrule height 6pt}
     \end{center}
   \end{beamercolorbox}
-  \usebeamerfont{block body}
-  \begin{beamercolorbox}[wd=\textwidth]{block body}
-    \begin{center}
-      }
-      \setbeamertemplate{block end}{
-    \end{center}
+  \usebeamerfont{sectionblock body}
+  \begin{beamercolorbox}[wd=\textwidth]{sectionblock body}
+    % \begin{center}
+    }
+    \setbeamertemplate{sectionblock end}{
+    % \end{center}
   \end{beamercolorbox}
   \vskip 0.5em
 }
+\newenvironment{sectionblock}[1]{
+  \def\insertblocktitle{#1}
+  \usebeamertemplate{sectionblock begin}
+}{
+  \usebeamertemplate{sectionblock end}
+}
+
+% blockのカスタマイズ
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamercolor{block title}{fg=themecolor1, bg=bgcolor1}
+\setbeamercolor{block body}{fg=themecolor1, bg=bgcolor2}
+\setbeamertemplate{block begin}{
+  \vskip0.5em
+  \begin{beamercolorbox}[wd=\textwidth, sep=0.5em]{block title}
+    \usebeamerfont{block title}\insertblocktitle
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=\textwidth, dp=0.5em]{block body}
+    \usebeamerfont{block body}
+    }
+    \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+  \vskip0.5em
+}
 
 % 強調テキスト
-\definecolor{myred}{HTML}{cc2014}
 \newcommand{\red}[1]{
-  \textcolor{myred}{\textbf{#1}}
+  \textcolor{themecolor2}{\textbf{#1}}
 }
 
 \endinput
