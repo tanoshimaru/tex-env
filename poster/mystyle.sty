@@ -130,7 +130,7 @@
 \setbeamercolor{sectionblock body}{fg=themecolor1}
 \setbeamertemplate{sectionblock begin}{
   \usebeamerfont{sectionblock title}
-  \begin{beamercolorbox}[wd=\textwidth]{sectionblock title}
+  \begin{beamercolorbox}[wd=\linewidth]{sectionblock title}
     \begin{center}
       \insertblocktitle
       \vskip -1.0em
@@ -138,7 +138,7 @@
     \end{center}
   \end{beamercolorbox}
   \usebeamerfont{sectionblock body}
-  \begin{beamercolorbox}[wd=\textwidth]{sectionblock body}
+  \begin{beamercolorbox}[wd=\linewidth]{sectionblock body}
     % \begin{center}
     }
     \setbeamertemplate{sectionblock end}{
@@ -159,11 +159,11 @@
 \setbeamercolor{block body}{fg=themecolor1, bg=bgcolor2}
 \setbeamertemplate{block begin}{
   \vskip0.5em
-  \begin{beamercolorbox}[wd=\textwidth, sep=0.5em]{block title}
+  \begin{beamercolorbox}[wd=\linewidth, sep=0.5em, left]{block title}
     \usebeamerfont{block title}\insertblocktitle
   \end{beamercolorbox}
-  \begin{beamercolorbox}[wd=\textwidth, dp=0.5em]{block body}
-    \usebeamerfont{block body}
+  \usebeamerfont{block body}
+  \begin{beamercolorbox}[wd=\linewidth, sep=0.5em, left]{block body}
     }
     \setbeamertemplate{block end}{
   \end{beamercolorbox}
