@@ -20,8 +20,10 @@
 \usetikzlibrary{arrows.meta, positioning}
 
 % for caption
+\setlength{\abovecaptionskip}{-1.5em}
+\setbeamertemplate{caption}[numbered]
 \setlength{\abovecaptionskip}{0pt}
-\setbeamerfont{caption}{size=\footnotesize}
+\setbeamerfont{caption}{size=\small}
 
 % for text color
 \usepackage{xcolor}
@@ -94,6 +96,9 @@
 \setbeamercolor{caption separator}{fg=themecolor1}
 \setbeamercolor{caption number}{fg=themecolor1}
 
+% アルゴリズムの文字色を変更
+\AtBeginEnvironment{algorithmic}{\color{themecolor1}}
+
 % itemizeのトグルを変更
 \setbeamertemplate{itemize item}{$\bullet$}
 \setbeamertemplate{itemize subitem}{$\circ$}
@@ -107,7 +112,7 @@
     \begin{center}
       \inserttitle \\
       \vskip 0.4em
-      \large \insertinstitute \hspace{0.5em} \insertauthor \hspace{0.5em} (指導教員 \supervisor \ 教授)
+      \large\insertinstitute\hspace{0.5em}\insertauthor\hspace{0.5em}（指導教員\supervisor\ 教授）
     \end{center}
   \end{beamercolorbox}
   \vskip -0.6em
@@ -119,7 +124,7 @@
 \setbeamertemplate{footline}{
   \begin{beamercolorbox}[wd=\paperwidth, dp=0.5em]{footline}
     \begin{center}
-      \conference \hspace{1.0em}|\hspace{1.0em} \insertdate
+      \conference\hspace{1.0em}|\hspace{1.0em}\insertdate
     \end{center}
   \end{beamercolorbox}
 }
