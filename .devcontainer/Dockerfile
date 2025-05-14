@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN echo "root:root" | chpasswd
+WORKDIR /workspace
 
 ARG USERNAME
 ARG UID
@@ -33,5 +33,3 @@ RUN set -eux; \
     chown -R "$UID:$GID" /workspace
 
 USER $UID:$GID
-
-WORKDIR /workspace
