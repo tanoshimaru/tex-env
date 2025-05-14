@@ -19,7 +19,8 @@
         "ryu1kn.partial-diff",
         "eamodio.gitlens",
         "streetsidesoftware.code-spell-checker",
-        "tomoki1207.pdf"
+        "tomoki1207.pdf",
+        "GitHub.copilot"
       ]
     }
   }
