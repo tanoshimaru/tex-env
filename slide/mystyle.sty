@@ -54,12 +54,16 @@
 % for spacing
 \usepackage{setspace}
 
-% for fonts
-\usefonttheme{professionalfonts} % 数式用フォントを指定
+% for font
+\usepackage{fontspec}
+% \fontspec{NotoSans-Regular}  % コンパイルに時間がかかるので一旦コメントアウト，最後にコメントアウトを外す
+
+% for Japanese font
 \usepackage{xeCJK}
-% \setmainfont{NotoSans-Regular}  % コンパイルに時間がかかるので一旦コメントアウト，最後にコメントアウトを外す
 \setCJKmainfont{Noto Sans CJK JP}
 \setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans CJK JP}
+
 
 % metropolis theme
 \usetheme{metropolis}
