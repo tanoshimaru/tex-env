@@ -4,8 +4,8 @@
 
 - `.vscode/settings.json`の`"latex-workshop.latex.recipe.default"`を変更することでデフォルトのビルドレシピを変更できる．
 
-    - `latexmk`：原稿用
-    - `xelatex`：スライド用
+  - `latexmk`：原稿用
+  - `xelatex`：スライド用
 
 ## ショートカット
 
@@ -26,26 +26,38 @@
     "key": "ctrl+alt+c", // 一時ファイルの削除
     "command": "latex-workshop.clean",
     "when": "editorLangId == latex"
+},
+{
+    "key": "cmd+s", // ビルドの強制停止 + 一時ファイルの削除 + ビルド
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "latex-workshop.kill",
+            "latex-workshop.clean",
+            "latex-workshop.build"
+        ]
+    },
+    "when": "editorLangId == latex"
 }
 ```
 
-## SSH鍵の共有
+## SSH 鍵の共有
 
-- keychainを使用してSSH鍵を共有する．
+- keychain を使用して SSH 鍵を共有する．
 
-**※以下の作業はすべてホストOSで行う．**
+**※以下の作業はすべてホスト OS で行う．**
 
-### keychainのインストール
+### keychain のインストール
 
-- keychainをホストOSにインストールする．
+- keychain をホスト OS にインストールする．
 
 ```bash
 sudo apt install keychain
 ```
 
-### keychainの設定
+### keychain の設定
 
-- 共有したいssh鍵が`~/.ssh/id_rsa`である場合，以下を`~/.bashrc`または`~/.zshrc`に追加する．
+- 共有したい ssh 鍵が`~/.ssh/id_rsa`である場合，以下を`~/.bashrc`または`~/.zshrc`に追加する．
 
 ```bash
 keychain -q --nogui $HOME/.ssh/id_rsa
