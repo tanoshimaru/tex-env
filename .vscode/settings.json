@@ -59,7 +59,8 @@
             "name": "cleanup_2",
             "command": "rm",
             "args": [
-                "-f",
+                "-rf",
+                ".tex_intermediates",
                 "indent.log",
                 "%DOCFILE%.bbl",
                 "%DOCFILE%.bbl-SAVE-ERROR",
