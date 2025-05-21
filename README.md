@@ -1,5 +1,14 @@
 # tex-env
 
+## セットアップ
+
+.env ファイルを作成し，UID および GID を設定する。
+
+```bash
+echo "UID=$(id -u)" > .env
+echo "GID=$(id -g)" >> .env
+```
+
 ## ビルドレシピ
 
 - `.vscode/settings.json`の`"latex-workshop.latex.recipe.default"`を変更することでデフォルトのビルドレシピを変更できる．

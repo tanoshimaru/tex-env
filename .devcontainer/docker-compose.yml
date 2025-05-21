@@ -5,8 +5,8 @@ services:
       dockerfile: Dockerfile
       args:
         USERNAME: $USER
-        UID: 1000
-        GID: 1000
+        UID: $UID
+        GID: $GID
     volumes:
       - ..:/workspace
     tty: true

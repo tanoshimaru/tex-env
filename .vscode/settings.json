@@ -90,7 +90,8 @@
             ]
         },
     ],
-    "latex-workshop.latex.recipe.default": "xelatex",
+    "latex-workshop.latex.recipe.default": "latexmk",  // for paper
+    // "latex-workshop.latex.recipe.default": "xelatex",  // for slide
     "editor.wordBasedSuggestions": "off",
     "editor.wordWrap": "on",
     "diffEditor.wordWrap": "inherit",
