@@ -5,8 +5,8 @@
 .env ファイルを作成し，UID および GID を設定する。
 
 ```bash
-echo "UID=$(id -u)" > .env
-echo "GID=$(id -g)" >> .env
+echo "UID=$(id -u)" > ./.devcontainer/.env
+echo "GID=$(id -g)" >> ./.devcontainer/.env
 ```
 
 ## ビルドレシピ
