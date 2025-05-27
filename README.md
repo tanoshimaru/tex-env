@@ -37,7 +37,7 @@ echo "GID=$(id -g)" >> ./.devcontainer/.env
     "when": "editorLangId == latex"
 },
 {
-    "key": "cmd+s", // ビルドの強制停止 + 一時ファイルの削除 + ビルド
+    "key": "shift+cmd+s", // ビルドの強制停止 + 一時ファイルの削除 + ビルド
     "command": "runCommands",
     "args": {
         "commands": [
