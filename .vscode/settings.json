@@ -1,9 +1,9 @@
 {
     // general
     "files.eol": "\n",
-    "files.autoSave": "off",
+    "files.autoSave": "afterDelay",
     // latex workshop
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "editor.formatOnSave": true,
@@ -91,7 +91,7 @@
             ]
         },
     ],
-    "latex-workshop.latex.recipe.default": "latexmk",  // for paper
+    "latex-workshop.latex.recipe.default": "latexmk", // for paper
     // "latex-workshop.latex.recipe.default": "xelatex",  // for slide
     "editor.wordBasedSuggestions": "off",
     "editor.wordWrap": "on",
