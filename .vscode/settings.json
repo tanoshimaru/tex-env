@@ -1,9 +1,9 @@
 {
     // general
     "files.eol": "\n",
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "off",
     // latex workshop
-    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "editor.formatOnSave": true,
