@@ -3,12 +3,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      environment:
-        - TZ=Asia/Tokyo
       args:
         USERNAME: $USER
         UID: $UID
         GID: $GID
+    environment:
+      - TZ=Asia/Tokyo
     volumes:
       - ..:/workspace
     tty: true

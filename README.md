@@ -18,9 +18,11 @@ echo "GID=$(id -g)" >> ./.devcontainer/.env
 
 ## ショートカット
 
-- `keybindings.json`に以下を追加することで，ビルドレシピの選択（`ctrl+alt+t`），ビルドの強制停止（`ctrl+alt+d`），一時ファイルの削除（`ctrl+alt+c`）のショートカットを使用できるようになる．
+- `keybindings.json`に以下を追加することで，ショートカットを使用できるようになる．
 
-```
+Windows の場合
+
+```json
 {
     "key": "ctrl+alt+t", // ビルドレシピの選択
     "command": "latex-workshop.recipes",
@@ -33,6 +35,38 @@ echo "GID=$(id -g)" >> ./.devcontainer/.env
 },
 {
     "key": "ctrl+alt+c", // 一時ファイルの削除
+    "command": "latex-workshop.clean",
+    "when": "editorLangId == latex"
+},
+{
+    "key": "ctrl+alt+s", // ビルドの強制停止 + 一時ファイルの削除 + ビルド
+    "command": "runCommands",
+    "args": {
+        "commands": [
+            "latex-workshop.kill",
+            "latex-workshop.clean",
+            "latex-workshop.build"
+        ]
+    },
+    "when": "editorLangId == latex"
+}
+```
+
+Mac の場合
+
+```json
+{
+    "key": "shift+cmd+t", // ビルドレシピの選択
+    "command": "latex-workshop.recipes",
+    "when": "editorLangId == latex"
+},
+{
+    "key": "shift+cmd+d", // ビルドの強制停止
+    "command": "latex-workshop.kill",
+    "when": "editorLangId == latex"
+},
+{
+    "key": "shift+cmd+c", // 一時ファイルの削除
     "command": "latex-workshop.clean",
     "when": "editorLangId == latex"
 },
