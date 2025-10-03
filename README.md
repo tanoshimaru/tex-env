@@ -20,7 +20,7 @@ echo "GID=$(id -g)" >> ./.devcontainer/.env
 
 - `keybindings.json`に以下を追加することで，ショートカットを使用できるようになる．
 
-Windows の場合
+### Windows の場合
 
 ```json
 {
@@ -52,7 +52,7 @@ Windows の場合
 }
 ```
 
-Mac の場合
+### Mac の場合
 
 ```json
 {
@@ -88,14 +88,18 @@ Mac の場合
 
 - keychain を使用して SSH 鍵を共有する．
 
-**※以下の作業はすべてホスト OS で行う．**
-
 ### keychain のインストール
 
-- keychain をホスト OS にインストールする．
+#### WSL の場合
 
 ```bash
 sudo apt install keychain
+```
+
+#### Mac の場合
+
+```zsh
+sudo brew install keychain
 ```
 
 ### keychain の設定
