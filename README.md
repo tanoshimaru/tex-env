@@ -9,13 +9,6 @@ echo "UID=$(id -u)" > ./.devcontainer/.env
 echo "GID=$(id -g)" >> ./.devcontainer/.env
 ```
 
-## ビルドレシピ
-
-- `.vscode/settings.json`の`"latex-workshop.latex.recipe.default"`を変更することでデフォルトのビルドレシピを変更できる．
-
-  - `latexmk`：原稿用
-  - `xelatex`：スライド用
-
 ## ショートカット
 
 - `keybindings.json`に以下を追加することで，ショートカットを使用できるようになる．
@@ -23,11 +16,6 @@ echo "GID=$(id -g)" >> ./.devcontainer/.env
 ### Windows の場合
 
 ```json
-{
-    "key": "ctrl+alt+t", // ビルドレシピの選択
-    "command": "latex-workshop.recipes",
-    "when": "editorLangId == latex"
-},
 {
     "key": "ctrl+alt+d", // ビルドの強制停止
     "command": "latex-workshop.kill",
@@ -55,11 +43,6 @@ echo "GID=$(id -g)" >> ./.devcontainer/.env
 ### Mac の場合
 
 ```json
-{
-    "key": "shift+cmd+t", // ビルドレシピの選択
-    "command": "latex-workshop.recipes",
-    "when": "editorLangId == latex"
-},
 {
     "key": "shift+cmd+d", // ビルドの強制停止
     "command": "latex-workshop.kill",
