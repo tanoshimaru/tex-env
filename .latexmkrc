@@ -27,8 +27,5 @@ $out_dir = ".";
 # エラーが発生した場合に一時ファイルを削除しない
 $emulate_aux = 1;
 
-# 一時ファイルのディレクトリ
-$aux_dir = ".tex_intermediates";
-
 # クリーンアップ
 $clean_ext="$clean_ext run.xml";
