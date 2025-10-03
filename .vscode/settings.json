@@ -25,69 +25,16 @@
             "name": "latexmk",
             "command": "latexmk",
             "args": [
-                "-r",
-                "%WORKSPACE_FOLDER%/.latexmkrc",
                 "-time",
                 "%DOC%",
             ]
         },
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "-r",
-                "-time",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "biber",
-            "command": "biber",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "cleanup_1",
-            "command": "latexmk",
-            "args": [
-                "-c",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "cleanup_2",
-            "command": "rm",
-            "args": [
-                "-rf",
-                ".tex_intermediates",
-                "indent.log",
-                "%DOCFILE%.bbl",
-                "%DOCFILE%.bbl-SAVE-ERROR",
-                "%DOCFILE%.dvi",
-                "%DOCFILE%.nav",
-                "%DOCFILE%.snm",
-                "%DOCFILE%.synctex.gz"
-            ]
-        }
     ],
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk",
             "tools": [
                 "latexmk",
-                "cleanup_1",
-                "cleanup_2"
-            ]
-        },
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex",
-                "biber",
-                "xelatex",
-                "cleanup_1",
-                "cleanup_2"
             ]
         },
     ],

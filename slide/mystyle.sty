@@ -55,15 +55,7 @@
 \usepackage{setspace}
 
 % for font
-\usepackage{fontspec}
-% \fontspec{NotoSans-Regular}  % コンパイルに時間がかかるので一旦コメントアウト，最後にコメントアウトを外す
-
-% for Japanese font
-\usepackage{xeCJK}
-\setCJKmainfont{Noto Sans CJK JP}
-\setCJKsansfont{Noto Sans CJK JP}
-\setCJKmonofont{Noto Sans CJK JP}
-
+\usepackage[haranoaji]{luatexja-preset}
 
 % metropolis theme
 \usetheme{metropolis}
@@ -72,6 +64,7 @@
   numbering=fraction % 合計ページ数を表示
 }
 % \setbeamerfont{frame numbering}{size=\large} % ページ番号のフォントサイズ
+\usefonttheme{professionalfonts} % 数式のフォントを変更
 
 % カラーを定義
 % \definecolor{themecolor}{HTML}{26373b}
