@@ -1,14 +1,5 @@
 # tex-env
 
-## セットアップ
-
-.env ファイルを作成し，UID および GID を設定する。
-
-```bash
-echo "UID=$(id -u)" > ./.devcontainer/.env
-echo "GID=$(id -g)" >> ./.devcontainer/.env
-```
-
 ## ショートカット
 
 - `keybindings.json`に以下を追加することで，ショートカットを使用できるようになる．
@@ -65,6 +56,29 @@ echo "GID=$(id -g)" >> ./.devcontainer/.env
     },
     "when": "editorLangId == latex"
 }
+```
+
+## セットアップ（devcontainerを使用しない場合）
+
+.devcontainerの削除
+
+```zsh
+rm -rf .devcontainer
+```
+
+Noto Sans CJK JP フォントのインストール
+
+```zsh
+brew install --cask font-noto-sans-cjk-jp
+```
+
+## セットアップ（devcontainerを使用する場合）
+
+.env ファイルを作成し，UID および GID を設定する。
+
+```bash
+echo "UID=$(id -u)" > ./.devcontainer/.env
+echo "GID=$(id -g)" >> ./.devcontainer/.env
 ```
 
 ## SSH 鍵の共有
