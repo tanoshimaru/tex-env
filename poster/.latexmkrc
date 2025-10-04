@@ -21,4 +21,4 @@ $out_dir = ".";
 $emulate_aux = 1;
 
 # クリーンアップ
-$clean_ext="$clean_ext %R.nav %R.snm %R.synctex.gz";
+$clean_ext="$clean_ext %R.nav %R.snm %R.synctex.gz indent.log";
