@@ -33,6 +33,7 @@
             "name": "delete_indent_log",
             "command": "rm",
             "args": [
+                "-f",
                 "indent.log",
             ]
         },
