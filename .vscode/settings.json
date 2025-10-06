@@ -29,12 +29,20 @@
                 "%DOC%",
             ]
         },
+        {
+            "name": "delete_indent_log",
+            "command": "rm",
+            "args": [
+                "indent.log",
+            ]
+        },
     ],
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk",
             "tools": [
                 "latexmk",
+                "delete_indent_log"
             ]
         },
     ],
