@@ -47,11 +47,24 @@
 \createpseudocodeblock{pcb}{center, boxed}{}{}{linenumbering}
 
 % for referencing
-\newcommand\figref[1]{\textbf{Figure~\ref{#1}}}
-\newcommand\tabref[1]{\textbf{Table~\ref{#1}}}
-\newcommand\algref[1]{\textbf{Algorithm~\ref{#1}}}
-\newcommand\chapref[1]{~\ref{#1}章}
-\newcommand\secref[1]{~\ref{#1}節}
+\usepackage{cleveref}
+% ラベル名を日本語に変更
+\crefformat{chapter}{第#2#1#3章}
+\Crefformat{chapter}{第#2#1#3章}
+\crefformat{section}{#2#1#3節}
+\Crefformat{section}{#2#1#3節}
+\crefformat{subsection}{#2#1#3節}
+\Crefformat{subsection}{#2#1#3節}
+\crefname{figure}{図}{図}
+\Crefname{figure}{図}{図}
+\crefname{table}{表}{表}
+\Crefname{table}{表}{表}
+\crefname{equation}{式}{式}
+\Crefname{equation}{式}{式}
+\crefname{algorithm}{アルゴリズム}{アルゴリズム}
+\Crefname{algorithm}{アルゴリズム}{アルゴリズム}
+\crefname{appendix}{付録}{付録}
+\Crefname{appendix}{付録}{付録}
 
 % for spacing
 \usepackage{setspace}

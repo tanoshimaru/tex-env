@@ -1,4 +1,4 @@
-\documentclass{ujarticle}
+\documentclass{ujreport}
 
 \usepackage{mystyle}
 
@@ -10,22 +10,27 @@
 
 \maketitle
 
-\section{はじめに}
+\chapter{はじめに}
+\label{chap:introduction}
 \input{section/1_introduction.tex}
 
-\section{準備}
+\chapter{準備}
+\label{chap:preliminaries}
 \input{section/2_preliminaries.tex}
 
-\section{提案手法}
+\chapter{提案手法}
+\label{chap:proposed_method}
 \input{section/3_proposed_method.tex}
 
-\section{実験および結果}
+\chapter{実験および結果}
+\label{chap:experiments_and_results}
 \input{section/4_experiments_and_results.tex}
 
-\section{まとめ}
+\chapter{まとめ}
+\label{chap:conclusion}
 \input{section/5_conclusion.tex}
 
-\section*{謝辞}
+\chapter*{謝辞}
 
 \printbibliography[title=参考文献]
 
